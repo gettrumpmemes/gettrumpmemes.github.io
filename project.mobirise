@@ -1,0 +1,146 @@
+{
+  "settings": {
+    "name": "gettrumpmemes",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [],
+    "favicon": "@PROJECT_PATH@/assets/images/trumpmemefavicon.png",
+    "robotsSwitcher": true,
+    "robotsText": "User-agent: *\nDisallow: /cgi-bin\nSitemap: https://gettrumpmemes.github.io/sitemap.xml/",
+    "sitemapSwitcher": true,
+    "siteUrl": "https://gettrumpmemes.github.io/",
+    "sitemapSwitcherAuto": "on",
+    "imageResize": false,
+    "usedWebp": false,
+    "cookiesAlert": false,
+    "gdpr": false,
+    "uniqCompNum": 2,
+    "versionPublish": "5.9.18"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "GetTrumpMemes | Home",
+        "meta_descr": "GetTrumpMemes is a social platform dedicated to creating, sharing, and consuming memes related to Donald Trump and his presidency. It provides an online space where people can post content that either pokes fun at Trump, reflects on his policies, or comment on the political climate of the time.",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "background-color": "@bgColor",
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "img": {
+              "object-fit": "contain",
+              "border-radius": "0 !important"
+            }
+          },
+          "_name": "image04",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"image03\" group=\"Image & Video\">\n    <mbr-parameters>\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" value=\"0\" step=\"1\">\n        <header>Show/Hide</header>\n        <input type=\"checkbox\" title=\"Caption\" name=\"showText\">\n        <header>Background</header>\n        <input type=\"color\" title=\"Color\" name=\"bgColor\" value=\"#ffffff\">\n    </mbr-parameters>\n\n    <div class=\"image-block m-auto\">\n        <a href=\"https://gettrumpmemes.com/\"><img src=\"@PROJECT_PATH@/assets/images/gettrumpmemes.png\" alt=\"gettrumpmemes\"></a>\n        <div mbr-if=\"showText\">\n            <p class=\"mbr-text mt-4 pb-4 align-center mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">\n                Unlock your true path!\n            </p>\n        </div>\n    </div>\n</section>",
+          "_cid": "uFGFEg1vXf",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "image04-0"
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor",
+              "@media (max-width: 767px)": {
+                "padding": "2rem 1.5rem"
+              },
+              "@media (min-width: 768px) and (max-width: 991px)": {
+                "padding": "2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "4rem"
+              }
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article07",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article07\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b><a href=\"https://gettrumpmemes.com/\" class=\"text-primary\">GetTrumpMemes</a> | Home&nbsp;</b></h3>\n          <div class=\"row card-box align-left\">\n            \n            \n            \n            <div class=\"item features-without-image col-12 active\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>The Rise of <a href=\"https://gettrumpmemes.github.io/\" class=\"text-primary\">GetTrumpMemes</a></b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">The Rise of GetTrumpMemes: A Digital Phenomenon in Political Satire<br><br>In the world of political discourse and internet culture, few things resonate as quickly and powerfully as a well-timed meme. Enter GetTrumpMemes, a social media platform that has captured the attention of meme enthusiasts, political commentators, and casual internet users alike. With its unique blend of humor, satire, and political commentary, GetTrumpMemes has emerged as a digital space where users from all walks of life gather to discuss, laugh, and sometimes even debate the former president, Donald Trump.<br><br>What is <a href=\"https://gettrumpmemes.github.io/\" class=\"text-primary\">GetTrumpMemes</a>?<br>At its core, GetTrumpMemes is a social platform dedicated to creating, sharing, and consuming memes related to Donald Trump and his presidency. It provides an online space where people can post content that either pokes fun at Trump, reflects on his policies, or comment on the political climate of the time. Much like other meme-centric platforms like Reddit or 4chan, GetTrumpMemes offers users a chance to express their opinions through humor while also creating a sense of community around shared political interests.<br><br>Memes have long been a tool for political expression, but GetTrumpMemes takes this concept to another level. Its popularity grew during Trump’s presidency and has only expanded since. Users can engage in the creative process of crafting memes, participating in meme battles, or simply scrolling through the endless stream of Trump-related content to see how others are expressing their views.<br><br>Political Satire Meets Humor<br>One of the most compelling aspects of <a href=\"https://gettrumpmemes.com/\" class=\"text-primary\">GetTrumpMemes</a> is how it blends political satire with humor. Trump, known for his controversial statements and unorthodox approach to politics, has become a walking meme factory for internet users. His tweets, speeches, and public appearances are often turned into bite-sized, comedic commentaries that simplify complex political issues into easily digestible visuals and text.<br><br>For example, a meme might take a moment from one of Trump’s speeches and exaggerate it, turning it into an absurd or ridiculous scenario. These humorous exaggerations allow people to laugh at, critique, or express their dissatisfaction with his policies in a lighthearted manner. While some memes are intended purely for humor, others have a more pointed political message, highlighting particular policy failures, controversies, or moments from Trump’s presidency that users feel need to be addressed.<br><br>A Polarizing Platform<br>Of course, not everyone finds the content on <a href=\"https://gettrumpmemes.com/\" class=\"text-primary\">GetTrumpMemes</a> amusing or appropriate. As with any political discussion, memes about Donald Trump can be polarizing, with some finding them offensive or disrespectful. Supporters of the former president may argue that the platform encourages unfair ridicule or distortion of his actions. On the other hand, critics often view it as an important tool for holding politicians accountable through humor.<br><br>One thing is clear: <a href=\"https://gettrumpmemes.com/\" class=\"text-primary\">GetTrumpMemes</a> is more than just a place for humor; it is a space where political expression happens in real-time. The platform allows for immediate reactions to Trump's latest remarks or actions, giving users the ability to share their thoughts and emotions through digital art and commentary. This quick response time amplifies the meme’s power, as it can go viral within hours of being posted.<br><br>The Role of Memes in Political Discourse<br>Memes like those on <a href=\"https://gettrumpmemes.com/\" class=\"text-primary\">GetTrumpMemes</a> have become a crucial part of contemporary political discourse. They serve as both a form of entertainment and a medium of resistance, enabling individuals to express frustration with the political status quo. Memes often communicate complex ideas and emotions in a format that is both accessible and shareable. Through humor, people can address issues ranging from economic inequality to international relations in ways that traditional political commentary may struggle to do.<br><br>In the case of <a href=\"https://gettrumpmemes.com/\" class=\"text-primary\">GetTrumpMemes</a>, the platform provides a space for people to unpack the many facets of Trump’s presidency. Whether through satire, critique, or sheer absurdity, memes create a shared language for understanding the impact of his time in office. As the political landscape continues to evolve, memes will likely remain an important part of the conversation.<br><br>Memes as Activism<br>Beyond just jokes and laughs, many memes posted on GetTrumpMemes serve as forms of activism. They challenge dominant narratives, highlight social injustices, or call attention to controversial issues. For example, memes that criticize Trump’s handling of the COVID-19 pandemic or his stance on climate change have become a way for people to engage with these topics in a more informal yet powerful way.<br><br>In this sense, GetTrumpMemes also reflects the broader role that internet culture plays in activism today. Platforms like these allow individuals to mobilize and organize around specific causes by using humor and satire as tools to foster conversation. Memes might not always offer solutions, but they spark awareness, and in doing so, they give people the space to think critically about the world around them.<br><br>Conclusion<br>GetTrumpMemes stands as a testament to the intersection of politics, culture, and humor in the digital age. Through the use of memes, users are able to engage with complex political issues while having a laugh in the process. Whether you love or loathe Donald Trump, GetTrumpMemes provides an online environment where you can freely express your thoughts and opinions, all while embracing the power of internet humor.<br><br>In a world where the boundaries between politics, media, and entertainment are constantly shifting, platforms like GetTrumpMemes remind us that memes are more than just jokes—they are an integral part of how we discuss and process political events. As long as Trump remains a significant figure in American politics, it seems likely that GetTrumpMemes will continue to thrive as a space for both humor and political commentary, reflecting the ever-changing landscape of digital discourse.<br><br><br>Exploring GetTrumpMemes.com: The Hub for Trump-Related Memes and Political Satire<br><br>In the ever-evolving landscape of online humor and political discourse, few websites have managed to carve out as unique a niche as GetTrumpMemes.com. This digital platform has emerged as a go-to hub for memes, satire, and commentary centered around former U.S. President Donald Trump. As internet culture increasingly becomes an outlet for political expression, GetTrumpMemes.com has gained traction for its blend of humor and political engagement, offering users a space to creatively critique and satirize Trump’s persona and policies.<br><br>What is GetTrumpMemes.com?<br>At its core, GetTrumpMemes.com is a website dedicated to the creation, sharing, and consumption of memes related to Donald Trump. The platform allows users to upload and browse a wide variety of Trump-themed content, ranging from comedic takes on his presidency to sharp political critiques. Whether it's poking fun at his speeches, mocking his controversial policies, or creatively exaggerating his public persona, GetTrumpMemes.com serves as a repository for the internet's collective views on Trump, often presented through humor and satire.<br><br>The website operates similarly to other meme-sharing platforms, but with a specific focus on one of the most polarizing figures in modern American politics. Through its simple design and user-friendly interface, GetTrumpMemes.com enables anyone—from casual internet users to political commentators—to express their opinions about Trump in a digital format that’s accessible, shareable, and often viral.<br><br>The Appeal of Memes in Political Commentary<br>Memes have long been a staple of online culture, but their use in political commentary has gained significant traction in recent years. Trump, with his larger-than-life persona, controversial policies, and constant media presence, has been a particularly popular subject for meme creators. On GetTrumpMemes.com, the former president’s words and actions are often transformed into exaggerated and comedic visuals that distill complex political events into easily digestible and highly shareable content.<br><br>Trump’s habit of making bold, often contradictory statements during his presidency made him a goldmine for meme creators. From his infamous “covfefe” tweet to the repeated controversies surrounding his comments on race and immigration, memes allowed people to take a critical but humorous approach to his leadership. GetTrumpMemes.com capitalizes on this by providing a space for users to creatively engage with Trump's political legacy, whether through outright humor, clever wordplay, or sharp social commentary.<br><br>Features of GetTrumpMemes.com<br>One of the key attractions of GetTrumpMemes.com is its simplicity and focus. The website’s user interface is easy to navigate, with categories for trending memes, new uploads, and popular tags. This ensures that visitors can quickly find the content they are interested in, whether it's political commentary, satire, or just pure humor.<br><br>User Submissions: Visitors to GetTrumpMemes.com can upload their own memes, contributing to the site’s constantly evolving content. This open format allows for a diverse range of memes—from the lighthearted to the critical, ensuring that the site remains a space for a variety of political viewpoints.<br><br>Trending Memes: The platform highlights the most popular memes based on user engagement, ensuring that the latest and most relevant content is easy to find. This gives users a chance to see how others are reacting to Trump-related news and events in real-time.<br><br>Meme Categories: The website often organizes memes into categories that make it easier for visitors to find specific types of content. For example, there may be separate sections for memes about Trump’s speeches, his policies, or specific controversies, allowing users to delve deeper into particular aspects of his political career.<br><br>Meme Generator: For those who want to add their own creative spin on Trump-related content, GetTrumpMemes.com offers a meme generator tool. This feature allows users to create their own Trump-themed memes by adding captions or images to pre-existing templates.<br><br>The Role of Memes in Shaping Public Perception<br>GetTrumpMemes.com plays a significant role in shaping the public’s perception of Donald Trump. Political memes have become a modern form of protest, activism, and education, allowing individuals to discuss politics in a more informal and approachable way. On a site like GetTrumpMemes.com, memes are more than just jokes—they’re a means of engaging with political issues, critiquing leadership, and sparking conversation.<br><br>Memes, with their humor and simplicity, can distill complex political topics into easily understandable messages. Whether it's an image poking fun at Trump’s infamous hair or a meme illustrating his handling of the economy, these bite-sized pieces of commentary help people process the overwhelming amount of information that comes with political discussions. They also create a space where people who may not typically engage in political discourse can participate in a more accessible and entertaining way.<br><br>A Polarizing Platform<br>As with any platform that focuses on a controversial political figure, GetTrumpMemes.com has faced its fair share of criticism. Supporters of Donald Trump may argue that the memes on the site are unfair, mocking, or even disrespectful. However, critics of Trump may view the site as a valuable tool for holding the former president accountable, offering a creative way to highlight his actions and policies in a way that traditional media might not.<br><br>For many, GetTrumpMemes.com reflects the polarizing nature of Trump’s presidency. It allows for a platform where both humor and criticism can coexist, sometimes in the same meme. Whether you find the content amusing or offensive, the site serves as a testament to the way that internet culture has transformed how we communicate about politics.<br><br>Memes as Digital Activism<br>In addition to humor, many memes on GetTrumpMemes.com serve as digital activism. Memes critiquing Trump’s stance on issues like immigration, climate change, or healthcare often reflect a desire for political change. These memes serve as a form of online protest, sparking dialogue and raising awareness about important political issues. They provide an outlet for those who feel marginalized or frustrated with Trump’s policies to voice their concerns in a way that’s both creative and engaging.<br><br>Memes, in this sense, become a form of resistance—an accessible tool for individuals to challenge political power, hold politicians accountable, and participate in the broader conversation surrounding social and political issues.<br><br>Conclusion: A Snapshot of Digital Politics<br>GetTrumpMemes.com captures the essence of modern digital politics: satire, humor, and activism all in one space. Whether you're a supporter or a critic of Donald Trump, the site offers a platform for political engagement, allowing people to react to his presidency in ways that are both entertaining and thought-provoking. In a time when political discourse can often feel overwhelming or polarizing, GetTrumpMemes.com provides a refreshing space for humor and reflection.<br><br>As internet culture continues to play an increasingly important role in political discourse, websites like GetTrumpMemes.com will likely remain a key part of how we discuss and dissect the figures who shape our political landscape. The site not only captures the influence of Donald Trump on contemporary politics but also highlights the power of memes as a medium for digital communication and activism.<br></p>\n              </div>\n            </div>\n          </div>\n          <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n            <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "uFGFFpTtFM",
+          "_anchor": "article07-1",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
